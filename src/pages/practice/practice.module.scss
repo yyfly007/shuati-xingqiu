@@ -1,0 +1,307 @@
+@use '@/styles/variables.scss' as *;
+
+.container {
+  min-height: 100vh;
+  padding: $page-padding;
+  display: flex;
+  flex-direction: column;
+  gap: $page-spacing;
+}
+
+.loadingWrap {
+  padding-top: 200rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.loadingText {
+  color: $color-text-tertiary;
+  font-size: $font-size-md;
+}
+
+/* 顶部问候卡 */
+.header {
+  background: linear-gradient(135deg, #2e5bff 0%, #5b7bff 100%);
+  border-radius: $radius-xl;
+  padding: $spacing-lg;
+  box-shadow: 0 8rpx 24rpx rgba(46, 91, 255, 0.25);
+}
+
+.headerTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: $spacing-lg;
+}
+
+.headerLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 8rpx;
+}
+
+.greeting {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+  color: $color-text-white;
+}
+
+.dateText {
+  font-size: $font-size-sm;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.checkinBadge {
+  padding: 8rpx 20rpx;
+  border-radius: $radius-button;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.checked {
+  background: #ffffff;
+}
+
+.checkinText {
+  font-size: $font-size-xs;
+  font-weight: $font-weight-semibold;
+  color: $color-text-white;
+}
+
+.checked .checkinText {
+  color: $color-primary;
+}
+
+.todayRow {
+  display: flex;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: $radius-lg;
+  padding: $spacing-md;
+}
+
+.todayItem {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rpx;
+}
+
+.todayNum {
+  font-size: $font-size-xxl;
+  font-weight: $font-weight-bold;
+  color: $color-text-white;
+}
+
+.accentNum {
+  color: #ffd6a8;
+}
+
+.todayLabel {
+  font-size: $font-size-xs;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* 快捷入口 */
+.quickRow {
+  display: flex;
+  gap: $spacing-md;
+}
+
+.quickCard {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  padding: $spacing-md;
+  box-shadow: $shadow-card;
+}
+
+.quickIcon {
+  font-size: 44rpx;
+}
+
+.quickTextWrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4rpx;
+  overflow: hidden;
+}
+
+.quickTitle {
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+}
+
+.quickDesc {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+  @include text-ellipsis;
+}
+
+.quickArrow {
+  font-size: $font-size-xl;
+  color: $color-text-disabled;
+}
+
+/* 区块标题 */
+.sectionTitle {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+  margin-top: $spacing-xs;
+}
+
+/* 题型 2x2 网格 */
+.typeGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-md;
+}
+
+.typeCard {
+  width: calc(50% - #{$spacing-md} / 2);
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  padding: $spacing-lg $spacing-md;
+  box-shadow: $shadow-card;
+  display: flex;
+  flex-direction: column;
+  gap: 6rpx;
+  box-sizing: border-box;
+}
+
+.typeIcon {
+  font-size: 48rpx;
+}
+
+.typeName {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+}
+
+.typeCount {
+  font-size: $font-size-sm;
+  color: $color-primary;
+  font-weight: $font-weight-medium;
+}
+
+.typeDesc {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+}
+
+/* 题库列表 */
+.bankList {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+}
+
+.bankItem {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  padding: $spacing-md $spacing-lg;
+  box-shadow: $shadow-card;
+  border: 2rpx solid transparent;
+}
+
+.bankActive {
+  border-color: $color-primary;
+  background: $color-primary-light;
+}
+
+.bankInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6rpx;
+  overflow: hidden;
+}
+
+.bankNameRow {
+  display: flex;
+  align-items: center;
+  gap: $spacing-xs;
+}
+
+.bankName {
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+  @include text-ellipsis;
+}
+
+.bankTag {
+  font-size: 20rpx;
+  padding: 2rpx 12rpx;
+  border-radius: $radius-xs;
+  flex-shrink: 0;
+}
+
+.tagOfficial {
+  background: $color-primary-light;
+  color: $color-primary;
+}
+
+.tagMine {
+  background: $color-accent-light;
+  color: $color-accent;
+}
+
+.bankMeta {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+}
+
+.bankRadio {
+  width: 72rpx;
+  height: 72rpx;
+  border-radius: $radius-round;
+  background: $color-bg-hover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.bankRadioOn {
+  background: $color-primary;
+}
+
+.bankRadioText {
+  font-size: $font-size-md;
+  color: $color-text-secondary;
+  font-weight: $font-weight-semibold;
+}
+
+.bankRadioOn .bankRadioText {
+  color: $color-text-white;
+}
+
+.bankEmpty {
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  padding: $spacing-xl;
+  display: flex;
+  justify-content: center;
+}
+
+.bankEmptyText {
+  color: $color-text-tertiary;
+  font-size: $font-size-sm;
+}
+
+.footerTip {
+  text-align: center;
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+  padding: $spacing-sm 0 $spacing-lg;
+}

@@ -1,0 +1,156 @@
+@use '@/styles/variables.scss' as *;
+
+.container {
+  min-height: 100vh;
+  padding: $page-padding;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+}
+
+/* 顶部卡 */
+.topCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  padding: $spacing-md $spacing-lg;
+  box-shadow: $shadow-card;
+}
+
+.topInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4rpx;
+  margin-right: $spacing-md;
+}
+
+.topTitle {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+  color: $color-text-primary;
+}
+
+.topDesc {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+}
+
+.practiceBtn {
+  padding: 0 $spacing-lg;
+  height: $button-height-sm;
+  border-radius: $radius-button;
+  background: $color-accent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.practiceBtnDisabled {
+  opacity: 0.5;
+}
+
+.practiceBtnText {
+  color: $color-text-white;
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+}
+
+/* 筛选 */
+.filterRow {
+  display: flex;
+  gap: $spacing-sm;
+}
+
+.filterChip {
+  padding: 10rpx 26rpx;
+  border-radius: $radius-button;
+  background: $color-bg-card;
+  border: 2rpx solid $color-border;
+}
+
+.filterActive {
+  background: $color-primary;
+  border-color: $color-primary;
+}
+
+.filterText {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+}
+
+.filterTextActive {
+  color: $color-text-white;
+  font-weight: $font-weight-semibold;
+}
+
+/* 列表 */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+}
+
+.itemBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 $spacing-xs;
+}
+
+.itemMeta {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+}
+
+.itemActions {
+  display: flex;
+  gap: $spacing-sm;
+}
+
+.miniBtn {
+  padding: 8rpx 24rpx;
+  border-radius: $radius-button;
+  background: $color-success;
+}
+
+.miniBtnGhost {
+  background: $color-bg-card;
+  border: 2rpx solid $color-border;
+}
+
+.miniBtnDisabled {
+  opacity: 0.5;
+}
+
+.miniBtnText {
+  font-size: $font-size-xs;
+  color: $color-text-white;
+  font-weight: $font-weight-semibold;
+}
+
+.miniBtnGhostText {
+  font-size: $font-size-xs;
+  color: $color-text-secondary;
+}
+
+/* 加载 */
+.loading {
+  padding: $spacing-xl 0;
+  display: flex;
+  justify-content: center;
+}
+
+.loadingText {
+  color: $color-text-tertiary;
+  font-size: $font-size-sm;
+}

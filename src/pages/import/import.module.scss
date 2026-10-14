@@ -1,0 +1,410 @@
+@use '@/styles/variables.scss' as *;
+
+.container {
+  min-height: 100vh;
+  padding: $page-padding;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+  padding-bottom: $spacing-xl;
+}
+
+/* 返回按钮（仅 H5 预览显示） */
+.backBar {
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 4rpx;
+  padding: 8rpx 24rpx;
+  margin: -$page-padding 0 0 (-$page-padding);
+  border-radius: 0 $radius-lg $radius-lg 0;
+  background: $color-bg-card;
+  box-shadow: $shadow-card;
+  transition: all $transition-fast;
+
+  &:active {
+    background: $color-primary-light;
+  }
+}
+
+.backArrow {
+  font-size: $font-size-lg;
+  color: $color-primary;
+  font-weight: $font-weight-bold;
+  line-height: 1;
+}
+
+.backText {
+  font-size: $font-size-sm;
+  color: $color-primary;
+  font-weight: $font-weight-semibold;
+}
+
+/* 模式切换 */
+.modeRow {
+  display: flex;
+  background: $color-bg-card;
+  border-radius: $radius-md;
+  padding: 8rpx;
+  box-shadow: $shadow-card;
+}
+
+.modeTab {
+  flex: 1;
+  height: 72rpx;
+  border-radius: $radius-sm;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modeTabActive {
+  background: $color-primary;
+}
+
+.modeText {
+  font-size: $font-size-md;
+  color: $color-text-secondary;
+  font-weight: $font-weight-medium;
+}
+
+.modeTextActive {
+  color: $color-text-white;
+  font-weight: $font-weight-semibold;
+}
+
+/* 卡片 */
+.card {
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  padding: $spacing-lg;
+  box-shadow: $shadow-card;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+}
+
+.label {
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+}
+
+/* 题库选择 */
+.bankChoiceRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-sm;
+}
+
+.bankChoice {
+  padding: 10rpx 26rpx;
+  border-radius: $radius-button;
+  background: $color-bg-hover;
+  border: 2rpx solid transparent;
+}
+
+.bankChoiceActive {
+  background: $color-primary-light;
+  border-color: $color-primary;
+}
+
+.bankChoiceText {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+}
+
+.bankChoiceActive .bankChoiceText {
+  color: $color-primary;
+  font-weight: $font-weight-semibold;
+}
+
+/* 输入 */
+.input {
+  background: $color-bg-hover;
+  border-radius: $radius-sm;
+  padding: $spacing-md;
+  font-size: $font-size-md;
+  color: $color-text-primary;
+  min-height: 40rpx;
+}
+
+.textarea {
+  background: $color-bg-hover;
+  border-radius: $radius-sm;
+  padding: $spacing-md;
+  font-size: $font-size-md;
+  color: $color-text-primary;
+  width: 100%;
+  min-height: 120rpx;
+}
+
+.batchTextarea {
+  min-height: 400rpx;
+}
+
+/* 题型 chips */
+.chipRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-sm;
+  align-items: center;
+}
+
+.chip {
+  padding: 12rpx 32rpx;
+  border-radius: $radius-button;
+  background: $color-bg-hover;
+  border: 2rpx solid transparent;
+}
+
+.chipActive {
+  background: $color-primary-light;
+  border-color: $color-primary;
+}
+
+.chipText {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+}
+
+.chipTextActive {
+  color: $color-primary;
+  font-weight: $font-weight-semibold;
+}
+
+.chipAnswer {
+  background: $color-success;
+  border-color: $color-success;
+}
+
+.chipAnswerText {
+  color: $color-text-white !important;
+  font-weight: $font-weight-semibold;
+}
+
+/* 选项行 */
+.optRow {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+}
+
+.optLetter {
+  width: 48rpx;
+  height: 48rpx;
+  border-radius: $radius-round;
+  background: $color-primary-light;
+  color: $color-primary;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* 格式说明 */
+.headRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.exampleBtn {
+  padding: 8rpx 24rpx;
+  border-radius: $radius-button;
+  background: $color-accent-light;
+}
+
+.exampleText {
+  font-size: $font-size-xs;
+  color: $color-accent;
+  font-weight: $font-weight-semibold;
+}
+
+.formatBox {
+  background: $color-bg-hover;
+  border-radius: $radius-sm;
+  padding: $spacing-md;
+}
+
+.formatText {
+  font-size: $font-size-xs;
+  color: $color-text-secondary;
+  line-height: $line-height-loose;
+}
+
+/* 解析预览 */
+.parseRow {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+}
+
+.parseBtn {
+  padding: 0 $spacing-lg;
+  height: $button-height-sm;
+  border-radius: $radius-button;
+  background: $color-primary-light;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.parseBtnText {
+  font-size: $font-size-sm;
+  color: $color-primary;
+  font-weight: $font-weight-semibold;
+}
+
+.parseSummary {
+  font-size: $font-size-xs;
+  color: $color-text-secondary;
+}
+
+.errorBox {
+  background: $color-error-light;
+  border-radius: $radius-sm;
+  padding: $spacing-md;
+  display: flex;
+  flex-direction: column;
+  gap: 8rpx;
+}
+
+.errorText {
+  font-size: $font-size-xs;
+  color: $color-error;
+  line-height: $line-height-normal;
+}
+
+.tip {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+}
+
+/* 保存按钮 */
+.saveBtn {
+  height: $button-height-lg;
+  border-radius: $radius-button;
+  background: linear-gradient(135deg, #2e5bff 0%, #5b7bff 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8rpx 24rpx rgba(46, 91, 255, 0.3);
+}
+
+.saveBtnDisabled {
+  opacity: 0.6;
+}
+
+.saveBtnText {
+  color: $color-text-white;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+}
+
+.footerTip {
+  text-align: center;
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+}
+
+/* 文件导入 */
+.fileBtnRow {
+  display: flex;
+  gap: $spacing-sm;
+}
+
+.fileBtn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8rpx;
+  padding: $spacing-md 0;
+  background: $color-bg-hover;
+  border-radius: $radius-md;
+  border: 2rpx solid transparent;
+  transition: all $transition-fast;
+
+  &:active {
+    border-color: $color-primary;
+    background: $color-primary-light;
+  }
+}
+
+.fileBadge {
+  width: 104rpx;
+  height: 60rpx;
+  border-radius: $radius-sm;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fileBadgeSheet {
+  background: $color-success-light;
+
+  .fileBadgeText {
+    color: $color-success;
+  }
+}
+
+.fileBadgeDoc {
+  background: $color-primary-light;
+
+  .fileBadgeText {
+    color: $color-primary;
+  }
+}
+
+.fileBadgePdf {
+  background: $color-error-light;
+
+  .fileBadgeText {
+    color: $color-error;
+  }
+}
+
+.fileBadgeText {
+  font-size: $font-size-xs;
+  font-weight: $font-weight-bold;
+}
+
+.fileBtnText {
+  font-size: $font-size-sm;
+  color: $color-text-primary;
+  font-weight: $font-weight-medium;
+}
+
+.fileBtnExt {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+}
+
+.fileName {
+  flex: 1;
+  margin-right: $spacing-sm;
+  font-size: $font-size-sm;
+  color: $color-text-primary;
+  font-weight: $font-weight-medium;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.previewBox {
+  background: $color-bg-hover;
+  border-radius: $radius-sm;
+  padding: $spacing-md;
+  display: flex;
+  flex-direction: column;
+  gap: 8rpx;
+}
+
+.previewText {
+  font-size: $font-size-xs;
+  color: $color-text-secondary;
+  line-height: $line-height-normal;
+}

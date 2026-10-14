@@ -1,0 +1,163 @@
+@use '@/styles/variables.scss' as *;
+
+.wrap {
+  min-height: 100vh;
+  padding: $page-padding;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+}
+
+.center {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loadingText {
+  color: $color-text-tertiary;
+  font-size: $font-size-md;
+}
+
+/* 顶栏 */
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.timer {
+  padding: 10rpx 28rpx;
+  border-radius: $radius-button;
+  background: $color-bg-card;
+  box-shadow: $shadow-card;
+}
+
+.timerUrgent {
+  background: $color-error;
+  animation: blink 1s infinite;
+
+  .timerText {
+    color: $color-text-white;
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.timerText {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+  color: $color-primary;
+  font-variant-numeric: tabular-nums;
+}
+
+.progressText {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+}
+
+/* 题目导航 */
+.navScroll {
+  width: 100%;
+}
+
+.navRow {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: $spacing-sm;
+  padding: $spacing-xs 0;
+}
+
+.navItem {
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: $radius-md;
+  background: $color-bg-card;
+  border: 2rpx solid $color-border;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.navItemActive {
+  border-color: $color-primary;
+  background: $color-primary-light;
+}
+
+.navItemDone {
+  background: $color-primary;
+  border-color: $color-primary;
+
+  .navItemText {
+    color: $color-text-white;
+  }
+}
+
+.navItemActive.navItemDone .navItemText {
+  color: $color-text-white;
+}
+
+.navItemText {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semibold;
+  color: $color-text-secondary;
+}
+
+/* 底部操作 */
+.footer {
+  display: flex;
+  gap: $spacing-md;
+  margin-top: auto;
+  padding-top: $spacing-md;
+}
+
+.sideBtn {
+  flex: 1;
+  height: $button-height-md;
+  border-radius: $radius-button;
+  background: $color-bg-card;
+  border: 2rpx solid $color-border;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sideBtnDisabled {
+  opacity: 0.5;
+}
+
+.sideBtnText {
+  font-size: $font-size-md;
+  font-weight: $font-weight-medium;
+  color: $color-text-secondary;
+}
+
+.submitBtn {
+  flex: 1;
+  height: $button-height-md;
+  border-radius: $radius-button;
+  background: $color-primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6rpx 16rpx rgba(46, 91, 255, 0.3);
+}
+
+.submitBtnText {
+  font-size: $font-size-md;
+  font-weight: $font-weight-bold;
+  color: $color-text-white;
+}
+
+.typeHint {
+  text-align: center;
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+  padding-bottom: $spacing-sm;
+}

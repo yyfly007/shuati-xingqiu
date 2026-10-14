@@ -1,0 +1,154 @@
+@use '@/styles/variables.scss' as *;
+
+.container {
+  min-height: 100vh;
+  padding: $page-padding;
+  display: flex;
+  flex-direction: column;
+  gap: $page-spacing;
+}
+
+/* 规则卡 */
+.rulesCard {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+  background: $color-accent-light;
+  border-radius: $radius-lg;
+  padding: $spacing-md $spacing-lg;
+}
+
+.rulesIcon {
+  font-size: 48rpx;
+}
+
+.rulesTextWrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4rpx;
+}
+
+.rulesTitle {
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+  color: $color-accent;
+}
+
+.rulesDesc {
+  font-size: $font-size-xs;
+  color: $color-text-secondary;
+  line-height: $line-height-normal;
+}
+
+.sectionTitle {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+}
+
+/* 题型 chips */
+.chipRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-sm;
+}
+
+.chip {
+  padding: 14rpx 28rpx;
+  border-radius: $radius-button;
+  background: $color-bg-card;
+  border: 2rpx solid $color-border;
+}
+
+.chipActive {
+  background: $color-primary-light;
+  border-color: $color-primary;
+}
+
+.chipText {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+}
+
+.chipTextActive {
+  color: $color-primary;
+  font-weight: $font-weight-semibold;
+}
+
+/* 题型 2x2 */
+.typeGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-md;
+}
+
+.typeItem {
+  width: calc(50% - #{$spacing-md} / 2);
+  box-sizing: border-box;
+  background: $color-bg-card;
+  border: 2rpx solid $color-border;
+  border-radius: $radius-lg;
+  padding: $spacing-md;
+  display: flex;
+  flex-direction: column;
+  gap: 4rpx;
+}
+
+.typeItemActive {
+  border-color: $color-primary;
+  background: $color-primary-light;
+}
+
+.typeItemName {
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+}
+
+.typeItemNameActive {
+  color: $color-primary;
+}
+
+.typeItemCount {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+}
+
+/* 汇总 */
+.summary {
+  background: $color-bg-card;
+  border-radius: $radius-md;
+  padding: $spacing-md $spacing-lg;
+}
+
+.summaryText {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+}
+
+/* 开始按钮 */
+.startWrap {
+  margin-top: auto;
+  padding-bottom: $spacing-lg;
+}
+
+.startBtn {
+  height: $button-height-lg;
+  border-radius: $radius-button;
+  background: linear-gradient(135deg, #2e5bff 0%, #5b7bff 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8rpx 24rpx rgba(46, 91, 255, 0.3);
+}
+
+.startBtnDisabled {
+  opacity: 0.6;
+}
+
+.startBtnText {
+  color: $color-text-white;
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+}

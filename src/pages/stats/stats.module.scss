@@ -1,0 +1,277 @@
+@use '@/styles/variables.scss' as *;
+
+.container {
+  min-height: 100vh;
+  padding: $page-padding;
+  display: flex;
+  flex-direction: column;
+  gap: $page-spacing;
+}
+
+.center {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loadingText {
+  color: $color-text-tertiary;
+  font-size: $font-size-md;
+}
+
+/* 通用卡片 */
+.card {
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  padding: $spacing-lg;
+  box-shadow: $shadow-card;
+}
+
+.cardHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: $spacing-md;
+}
+
+.cardTitle {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+}
+
+.cardSub {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+}
+
+/* 日历 */
+.weekHead {
+  display: flex;
+  margin-bottom: $spacing-sm;
+}
+
+.weekCell {
+  flex: 1;
+  text-align: center;
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+}
+
+.calGrid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.calCell {
+  width: calc(100% / 7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rpx 0;
+}
+
+.calDay {
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: $radius-round;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calDayChecked {
+  background: $color-accent-light;
+}
+
+.calDayToday {
+  border: 3rpx solid $color-primary;
+}
+
+.calDayText {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+}
+
+.calDayCheckedText {
+  color: $color-accent;
+  font-weight: $font-weight-bold;
+}
+
+.calLegend {
+  display: flex;
+  gap: $spacing-lg;
+  margin-top: $spacing-md;
+  padding-top: $spacing-md;
+  border-top: 2rpx solid $color-divider;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: $spacing-xs;
+}
+
+.legendDot {
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: $radius-round;
+}
+
+.legendDotChecked {
+  background: $color-accent;
+}
+
+.legendDotToday {
+  background: $color-bg-card;
+  border: 3rpx solid $color-primary;
+}
+
+.legendText {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+}
+
+/* 今日卡 */
+.todayCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: $color-warning;
+  border-radius: $radius-lg;
+  padding: $spacing-md $spacing-lg;
+}
+
+.todayCardDone {
+  background: $color-bg-card;
+  box-shadow: $shadow-card;
+}
+
+.todayLeft {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4rpx;
+}
+
+.todayTitle {
+  font-size: $font-size-md;
+  font-weight: $font-weight-bold;
+  color: $color-text-white;
+}
+
+.todayCardDone .todayTitle {
+  color: $color-success;
+}
+
+.todayDesc {
+  font-size: $font-size-xs;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.todayCardDone .todayDesc {
+  color: $color-text-tertiary;
+}
+
+.todayBtn {
+  padding: 0 $spacing-lg;
+  height: $button-height-sm;
+  border-radius: $radius-button;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.todayBtnText {
+  color: $color-warning;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-bold;
+}
+
+/* 指标 tiles */
+.tiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-md;
+}
+
+.tile {
+  width: calc(50% - #{$spacing-md} / 2);
+  box-sizing: border-box;
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  padding: $spacing-lg;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8rpx;
+  box-shadow: $shadow-card;
+}
+
+.tileNum {
+  font-size: $font-size-xxl;
+  font-weight: $font-weight-bold;
+  color: $color-primary;
+}
+
+.tileAccent {
+  color: $color-accent;
+}
+
+.tileLabel {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+}
+
+/* 7 日图表 */
+.chart {
+  display: flex;
+  align-items: flex-end;
+  gap: $spacing-sm;
+  height: 240rpx;
+}
+
+.chartCol {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8rpx;
+  height: 100%;
+}
+
+.chartBarArea {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.chartBar {
+  width: 40rpx;
+  background: $color-bg-hover;
+  border-radius: $radius-xs $radius-xs 0 0;
+}
+
+.chartBarFull {
+  background: linear-gradient(180deg, #5b7bff 0%, #2e5bff 100%);
+}
+
+.chartLabel {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+}
+
+.chartLabelToday {
+  color: $color-primary;
+  font-weight: $font-weight-bold;
+}
+
+.chartNum {
+  font-size: $font-size-xs;
+  color: $color-text-secondary;
+}

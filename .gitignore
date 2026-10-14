@@ -1,0 +1,9 @@
+node_modules/
+.npm-cache/
+.swc/
+dist/
+.pai/
+*.log
+.DS_Store
+Thumbs.db
+project.private.config.json

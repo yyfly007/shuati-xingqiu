@@ -1,0 +1,157 @@
+@use '@/styles/variables.scss' as *;
+
+.wrap {
+  min-height: 100vh;
+  padding: $page-padding;
+  display: flex;
+  flex-direction: column;
+  gap: $page-spacing;
+}
+
+.center {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loadingText {
+  color: $color-text-tertiary;
+  font-size: $font-size-md;
+}
+
+/* 成绩卡 */
+.scoreCard {
+  background: linear-gradient(135deg, #2e5bff 0%, #5b7bff 100%);
+  border-radius: $radius-xl;
+  padding: $spacing-xl $spacing-lg;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 8rpx 24rpx rgba(46, 91, 255, 0.25);
+}
+
+.scoreEmoji {
+  font-size: 72rpx;
+}
+
+.scoreRow {
+  display: flex;
+  align-items: baseline;
+  margin-top: $spacing-sm;
+}
+
+.scoreRate {
+  font-size: 96rpx;
+  font-weight: $font-weight-bold;
+  color: $color-text-white;
+  line-height: 1;
+}
+
+.scoreUnit {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+  color: $color-text-white;
+  margin-left: 4rpx;
+}
+
+.scoreLabel {
+  margin-top: $spacing-sm;
+  font-size: $font-size-sm;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.scoreMeta {
+  margin-top: $spacing-lg;
+  width: 100%;
+  display: flex;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: $radius-lg;
+  padding: $spacing-md;
+}
+
+.metaItem {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rpx;
+}
+
+.metaNum {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+  color: $color-text-white;
+}
+
+.metaLabel {
+  font-size: $font-size-xs;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* 错题 */
+.sectionTitle {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+}
+
+.wrongList {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+}
+
+.perfect {
+  background: $color-success-light;
+  border-radius: $radius-lg;
+  padding: $spacing-xl;
+  display: flex;
+  justify-content: center;
+}
+
+.perfectText {
+  font-size: $font-size-md;
+  color: $color-success;
+  font-weight: $font-weight-semibold;
+}
+
+/* 操作 */
+.actions {
+  display: flex;
+  gap: $spacing-md;
+}
+
+.actionBtn {
+  flex: 1;
+  height: $button-height-md;
+  border-radius: $radius-button;
+  background: $color-primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.actionGhost {
+  background: $color-bg-card;
+  border: 2rpx solid $color-border;
+}
+
+.actionPrimaryText {
+  color: $color-text-white;
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+}
+
+.actionGhostText {
+  color: $color-text-secondary;
+  font-size: $font-size-md;
+  font-weight: $font-weight-medium;
+}
+
+.typeLine {
+  text-align: center;
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+  padding-bottom: $spacing-sm;
+}
