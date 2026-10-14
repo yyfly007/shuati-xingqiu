@@ -15,11 +15,13 @@
 
 ## 📸 截图
 
-> TODO：补充小程序截图（建议：练习、测验、错题、统计 各一张）
+| **练习**（题库 + 按题型练） | **限时测验**（按题库/题型组卷） |
+| :---: | :---: |
+| ![](docs/screenshots/practice.png) | ![](docs/screenshots/quiz.png) |
+| **错题本**（自动收录 + 解析） | **学习统计**（打卡日历 + 近 7 日趋势） |
+| ![](docs/screenshots/wrong.png) | ![](docs/screenshots/stats.png) |
 
-| 练习 | 测验 | 错题 | 统计 |
-| --- | --- | --- | --- |
-| 待补充 | 待补充 | 待补充 | 待补充 |
+> 以上为 H5 mock 预览截图，与小程序 UI 一致。
 
 ## 📁 项目结构
 
@@ -124,8 +126,8 @@ npm run dev:h5
 
 如果这个项目对你有帮助，欢迎请我喝杯咖啡：
 
-- 爱发电：TODO（补充链接）
-- GitHub Sponsors：TODO（补充链接）
+- [GitHub Sponsors](https://github.com/sponsors/yyfly007)
+- 爱发电：敬请期待
 
 ## 📄 License
 
