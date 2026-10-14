@@ -129,4 +129,4 @@ npm run dev:h5
 
 ## 📄 License
 
-[MIT](./LICENSE) Copyright (c) 2026 yy007
+[MIT](./LICENSE) Copyright (c) 2026 yyfly007
